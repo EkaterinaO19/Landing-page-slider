@@ -1,0 +1,8 @@
+.scrollingDown {
+    z-index: 1;
+}
+
+.slideItem {
+    height: 500px;
+    margin-right: 16px;
+}

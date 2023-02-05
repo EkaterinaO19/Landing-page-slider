@@ -1,0 +1,27 @@
+.wrapper{
+    height: 100px;
+    background: linear-gradient(0deg, #464341 0%, #010101 100%);
+}
+.logo_group{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.left{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 7px;
+}
+.right{
+    display: flex;
+}
+.number{
+    display: flex;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    align-items: center;
+    color: #FFFFFF;
+}
