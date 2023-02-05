@@ -5,11 +5,14 @@ import {pictures} from "../../pictures";
 
 function SliderSection(props) {
     return (
-        <div >
+        <div>
             <h1 className={styles.title}>
                 Lorem ipsum dolor sit amet
             </h1>
-        <ScrollableSlider pictures={pictures}/>
+            <div>
+
+            </div>
+            <ScrollableSlider pictures={pictures}/>
         </div>
     );
 }
