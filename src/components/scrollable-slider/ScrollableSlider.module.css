@@ -1,8 +1,26 @@
-.scrollingDown {
-    z-index: 1;
+.content_2 {
+    margin-top: 150px;
+    top: 625px;
+    white-space: nowrap;
+    display: flex;
+    height: 80vh;
+    width: 200vw;
+    position: fixed;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 260px;
 }
 
-.slideItem {
-    height: 500px;
-    margin-right: 16px;
+.card {
+    color: white;
+    white-space: nowrap;
+    text-align: center;
+    height: auto;
+    width: 330px;
+    margin: 10px 15px 10px 10px;
+    object-fit: cover;
 }
+
+
+
+

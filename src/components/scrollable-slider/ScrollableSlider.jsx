@@ -1,42 +1,63 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {Carousel} from 'antd';
+import React, {useEffect} from 'react';
 import styles from './ScrollableSlider.module.css'
+import Image1 from '../../assets/slider-section/andres-vera-CmmYT6Mm948-unspl.png';
+import Image2 from '../../assets/slider-section/andres-vera-CmmYT6Mm948-unsp.png';
+import Image3 from '../../assets/slider-section/andres-vera-CmmYT6Mm948-u.png';
+import Image5 from '../../assets/slider-section/andres-vera-CmmYT6Mm948-unsplash3 .png';
+import Image6 from '../../assets/slider-section/andres-vera-CmmYT6Mm948-unsplash3 .png';
+import Image4 from '../../assets/slider-section/andres-vera-CmmYT6Mm948-unsplas.png';
+import Image7 from '../../assets/slider-section/andres-vera-CmmYT6Mm948-unsplash 1.png';
+import Image8 from '../../assets/slider-section/andres-vera-CmmYT6Mm948-unsplash2.png';
 
 
-const ScrollableSlider = ({pictures}) => {
-    const [currentSlide, setCurrentSlide] = useState(0);
+const ScrollableSlider = () => {
 
     useEffect(() => {
-        const handleScroll = () => {
-            const {next, prev} = sliderRef.current;
-            if (window.scrollY > window.innerHeight) {
-                prev();
-            } else {
-                next();
+        const content = document.getElementById('content_2');
+        const onScroll = () => {
+            const scrolledY = window.scrollY;
+
+            if (scrolledY > 1400 && scrolledY < 3000) {
+                content.style.marginTop = 100 + 'px';
+                content.style.position = "fixed";
+                content.style.top = scrolledY * 0.001 + 'px';
+                content.style.left = -(scrolledY - 1400) * 0.55 + 'px';
+
             }
-        };
+            if (scrolledY <= 1400) {
+                content.style.position = "initial";
 
+            }
+            if (scrolledY >= 3000) {
 
-         window.addEventListener('scroll', handleScroll);
+                content.style.position = "absolute";
+                content.style.top = 3000 + 'px';
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+            }
 
-    const sliderRef = useRef();
+        }
 
-    return (<Carousel
-            slidesToShow={4}
-            ref={sliderRef}
-            dots={false}
-            afterChange={(current) => setCurrentSlide(current)}
-            style={{height: '100vh'}}
-        >
-            {pictures.map((picture, index) => (<div key={picture.id} style={{display: 'flex'}}>
-                    <img src={picture.src} alt={picture.title} style={{flex: 1}}/>
-                </div>))}
-        </Carousel>);
+        window.addEventListener('scroll', onScroll)
+        return content.removeEventListener('scroll', onScroll)
+    }, [])
+
+    return (
+        <div className={styles.content_2} id="content_2">
+            <div className={styles.card}>
+                <img src={Image1} alt={'image'}/>
+            </div>
+            <div className={styles.card}>
+                <img src={Image2} alt={'image'}/>
+            </div>
+            <div className={styles.card}><img src={Image3} alt={'image'}/></div>
+            <div className={styles.card}><img src={Image4} alt={'image'}/></div>
+            <div className={styles.card}><img src={Image5} alt={'image'}/></div>
+            <div className={styles.card}><img src={Image6} alt={'image'}/></div>
+            <div className={styles.card}><img src={Image7} alt={'image'}/></div>
+            <div className={styles.card}><img src={Image8} alt={'image'}/></div>
+        </div>
+
+    );
 };
 
 export default ScrollableSlider;

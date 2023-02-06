@@ -1,11 +1,9 @@
-.wrapper{
+.wrapper {
     height: 100px;
     background: linear-gradient(0deg, #464341 0%, #010101 100%);
 }
 .logo_group{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 .left{
     display: flex;
@@ -24,4 +22,17 @@
     line-height: 33px;
     align-items: center;
     color: #FFFFFF;
+}
+.navbar {
+    position: relative;
+    z-index: 999;
+    height: 62px;
+    width: 100%;
+    background-color: #ccc;
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
 }

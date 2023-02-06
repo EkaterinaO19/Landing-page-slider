@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './MainBlock.module.css'
-import Image1 from '../../assets/main-block/image1.png';
-import Image2 from '../../assets/main-block/image2.png';
+import styles from "../last-block/LastBlock.module.css";
+import Image1 from "../../assets/last-block/andres-vera-CmmYT6Mm948-unsplash 1.png";
+import Image2 from "../../assets/last-block/taisiia-stupak-viq7xx1boxo-unsplash 1.png";
 
-function MainBlock(props) {
+function LastBlock(props) {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
@@ -47,7 +47,7 @@ function MainBlock(props) {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default MainBlock;
+export default LastBlock;
