@@ -1,7 +1,7 @@
 .container {
     display: block;
-    margin-top: 2300px;
-    height: 1400px;
+    margin-top: 2500px;
+    margin-bottom: 200px;
 }
 
 .wrapper {
@@ -21,7 +21,6 @@
     text-transform: uppercase;
     color: #141414;
     justify-content: center;
-    margin-top: 200px;
     margin-bottom: 100px;
 }
 

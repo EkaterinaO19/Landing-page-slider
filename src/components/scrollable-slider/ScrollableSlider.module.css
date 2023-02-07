@@ -1,10 +1,10 @@
 .content_2 {
-    margin-top: 150px;
-    top: 625px;
+    margin-top: 100px;
+    top: 850px;
     white-space: nowrap;
     display: flex;
-    height: 80vh;
-    width: 200vw;
+    /*height: 50vh;*/
+    width: 250vw;
     position: fixed;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -16,11 +16,22 @@
     white-space: nowrap;
     text-align: center;
     height: auto;
-    width: 330px;
-    margin: 10px 15px 10px 10px;
+    width: 350px;
+    margin-right: 20px;
     object-fit: cover;
 }
 
+.title {
+    font-family: 'Orchidea Pro', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 110%;
+    display: flex;
+    text-transform: uppercase;
+    color: #141414;
+    margin-left: 260px;
+}
 
 
 

@@ -18,11 +18,10 @@ const ScrollableSlider = () => {
             const scrolledY = window.scrollY;
 
             if (scrolledY > 1400 && scrolledY < 3000) {
-                content.style.marginTop = 100 + 'px';
+                content.style.marginTop = 200 + 'px';
                 content.style.position = "fixed";
                 content.style.top = scrolledY * 0.001 + 'px';
                 content.style.left = -(scrolledY - 1400) * 0.55 + 'px';
-
             }
             if (scrolledY <= 1400) {
                 content.style.position = "initial";
@@ -42,20 +41,37 @@ const ScrollableSlider = () => {
     }, [])
 
     return (
-        <div className={styles.content_2} id="content_2">
-            <div className={styles.card}>
-                <img src={Image1} alt={'image'}/>
+        <>
+            <h1 className={styles.title}>
+                Lorem ipsum dolor sit amet
+            </h1>
+            <div className={styles.content_2} id="content_2">
+                <div className={styles.card}>
+                    <img src={Image1} alt={'image'}/>
+                </div>
+                <div className={styles.card}>
+                    <img src={Image2} alt={'image'}/>
+                </div>
+                <div className={styles.card}>
+                    <img src={Image3} alt={'image'}/>
+                </div>
+                <div className={styles.card}>
+                    <img src={Image4} alt={'image'}/>
+                </div>
+                <div className={styles.card}>
+                    <img src={Image5} alt={'image'}/>
+                </div>
+                <div className={styles.card}>
+                    <img src={Image6} alt={'image'}/>
+                </div>
+                <div className={styles.card}>
+                    <img src={Image7} alt={'image'}/>
+                </div>
+                <div className={styles.card}>
+                    <img src={Image8} alt={'image'}/>
+                </div>
             </div>
-            <div className={styles.card}>
-                <img src={Image2} alt={'image'}/>
-            </div>
-            <div className={styles.card}><img src={Image3} alt={'image'}/></div>
-            <div className={styles.card}><img src={Image4} alt={'image'}/></div>
-            <div className={styles.card}><img src={Image5} alt={'image'}/></div>
-            <div className={styles.card}><img src={Image6} alt={'image'}/></div>
-            <div className={styles.card}><img src={Image7} alt={'image'}/></div>
-            <div className={styles.card}><img src={Image8} alt={'image'}/></div>
-        </div>
+        </>
 
     );
 };
